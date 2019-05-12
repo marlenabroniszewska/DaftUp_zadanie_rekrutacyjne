@@ -10,11 +10,11 @@
 <body>
 	<div class="modal">
 		<div class="modal__content">
-			<div class="close">
+			<div class="modal__header">
 				<button class="button button--close-btn">+</button>
 			</div>
 
-			<a href="3.html" class="navigation">TASK 3</a>
+			<a href="3.html" class="modal__navigation">TASK 3</a>
 			<p>Click the button to view TASK 3</p>
 		</div>
 	</div>
@@ -86,7 +86,7 @@ body{
   margin-top: 10px;
   outline: 0;
 }
-.navigation{
+.modal__navigation{
   background-color: red;
   border-radius: 30px;
   color: white;
@@ -99,7 +99,7 @@ body{
   margin-top: 60px;
   outline: 0;
 }
-.navigation:hover,
+.modal__navigation:hover,
 button:hover{
   opacity: 0.85;
 }
@@ -109,7 +109,7 @@ p{
   padding: 10px;
 }
 
-.close{
+.modal__header{
   position: absolute;
   top: 0; 
 }
