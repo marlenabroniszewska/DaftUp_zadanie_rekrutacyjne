@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Zadanie 1 - Broniszewska Marlena</title>
+	<meta name="author" content="Broniszewska Marlena">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+	<header>
+	</header>
+	<div class="mid">
+		<aside>
+		</aside>
+		<main>
+				<div class="content">
+				</div>
+				<div class="content">
+				</div>		
+				<div class="content">
+				</div>
+				<div class="content">
+				</div>
+				<div class="content">
+				</div>
+				<div class="content">
+				</div>
+		</main>
+	</div>
+	<footer>
+	</footer>
+</body>
+</html>
+
+<style type="text/css">
+body{
+	margin: 0px;
+	height: auto;
+}
+
+header{
+	background-color: #1A1C22;
+	min-height: 100px;
+	width: 100%;
+}
+
+.mid{
+	min-height: 400px;
+	width: 100%;
+	margin: 15px 0px;
+}
+
+aside{
+	background-color: #6C757D;
+	width: 100%;
+	min-height: 200px;
+	margin-bottom: 15px;
+}
+
+main{
+	margin: auto;
+	width: 100%;
+	min-height: 200px;
+}
+
+.content{
+	width: 100%;
+	min-height: calc((200px - 75px)/6);
+	background-color: #343A40;
+	margin:0px 0px 15px 0px;
+}
+
+.content:last-child{
+	margin-bottom: 0px;
+}
+
+footer{
+	background-color: #1A1C22;
+	min-height: 100px;
+	width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+	main{
+		width: 100%;
+	}
+	.content{
+		width: calc((100% - 15px)/2);
+		min-height: calc((200px - 30px)/3);
+		margin:0px 0px 15px 0px;
+		float: left;
+	}
+	.content:first-child{
+		margin: 0px 15px 15px 0px;
+	}
+	.content:nth-child(odd){
+		margin: 0px 15px 15px 0px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.mid{
+		display: flex;
+	}
+	aside{
+		width: 400px;
+		margin: 0px;
+	}
+	main{
+		width: calc(100% - 400px);
+		min-height: 100%;
+		margin: 0;
+	}
+	.content{
+		width: calc((100% - 30px) / 2);
+		min-height: calc((100% - 30px) / 3);
+		margin:0px 0px 15px 15px;
+		float: left;
+		display: flex;
+	}
+	.content:first-child{
+		margin-left: 15px;
+	}
+	.content:nth-child(odd){
+		margin: 0px 0px 15px 15px;
+	}
+	.content:nth-child(5){
+		margin: 0px 0px 0px 15px;
+	}
+}
+@media(min-width: 1200px) {
+	.mid{
+		display: flex;
+	}
+	aside{
+		width: 400px;
+		margin: 0;
+	}
+	main{
+		width: calc(100% - 400px);
+		min-height: 100%;
+		margin: 0;
+	}
+	.content{
+		width: calc((100% - 45px) / 3);
+		min-height: calc((100% - 15px) / 2);
+		margin:0px 0px 15px 15px;
+		float: left;
+		display: flex;
+	}
+	.content:first-child{
+		margin-left: 15px;
+	}
+	.content:nth-child(odd){
+		margin: 0px 0px 15px 15px;
+	}
+	.content:nth-child(5){
+		margin: 0px 0px 0px 15px;
+	}
+}
+</style>
