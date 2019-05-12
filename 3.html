@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zadanie 3 - Broniszewska Marlena</title>
+	<meta name="author" content="Broniszewska Marlena">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+	<form onsubmit="return myFunction();">
+		<input type="text" placeholder="Search.."></input>
+		<button type="submit">Search</button>
+	</form>
+	<table class"my-table">
+		<tr>
+			<td>Walmart</td>
+		</tr>
+		<tr>
+			<td>State Grid</td>
+		</tr>
+		<tr>
+			<td>Sinopec Group</td>
+		</tr>	
+		<tr>
+			<td>China National Petroleum</td>
+		</tr>
+		<tr>
+			<td>Royal Dutch Shell</td>
+		</tr>
+		<tr>
+			<td>Toyota Motor</td>
+		</tr>
+		<tr>
+			<td>Volkswagen</td>
+		</tr>
+		<tr>
+			<td>BP</td>
+		</tr>
+		<tr>
+			<td>Exxon Mobil</td>
+		</tr>
+		<tr>
+			<td>Berkshire Hathaway</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<style type="text/css">
+body{
+	width: 100%;
+}
+input{
+	width: 80%;
+	height: 35px;
+	margin: 30px 5px 10px 30px;
+	font-size: 15px;
+	outline: 0;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+
+button{
+	height: 35px;
+	font-size: 15px;
+	background-color: #DDD;
+	padding: 5px 10px;
+	outline: 0;
+	border-radius: 5px;
+	border: 1px solid #BBB;
+}
+button:hover{
+	opacity: 0.7;
+	border: 1px solid #444;
+}
+
+table, tr{
+	width: 80%;
+	height: 35px;
+	margin: 30px;
+	margin-top: 0px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+td{
+	padding-left: 10px;
+}
+</style>
+
+<script type="text/javascript">
+function myFunction(){
+	var input = (document.getElementsByTagName('input')[0]).value.toLowerCase();
+	var tabel = (document.getElementsByClassName('my-table')[0]);
+	var tr = document.getElementsByTagName('tr');
+
+	for (i = 0; i < tr.length; i++){
+		td = tr[i].getElementsByTagName('td')[0];
+		if(td){
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toLowerCase().indexOf(input) > -1) {
+				tr[i].style.display = "";
+			}
+			else{
+				tr[i].style.display = "none";
+			}
+		}
+	}
+return false;
+}
+</script>
